@@ -37,7 +37,7 @@ useEffect(() => {
 
 let getFaveTicks = async() => {
   const base_url = process.env.REACT_APP_BASE_URL
-  let response = await fetch(`http://${base_url}/api/tickers/`, {
+  let response = await fetch(`http://127.0.0.1:8000/api/tickers/`, {
       method: 'GET',
       headers: {
 
@@ -119,7 +119,7 @@ let getFaveTicks = async() => {
             'user': user.user_id
         };
             
-        fetch(`http://${base_url}/api/tickers/`, {
+        fetch(`http://127.0.0.1:8000/api/tickers/`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -161,7 +161,7 @@ const handleDelete = (id) => {
       'id': id
   }; 
 
-  fetch(`http://${base_url}/api/tickers/`, {
+  fetch(`http://127.0.0.1:8000/api/tickers/`, {
       method: 'DELETE',
       headers: {
           'Content-Type': 'application/json',
